@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function (){
+            //document.getElementById("mydiv").innerHTML="aaa";
+            /*var h = $("mydiv").html();
+            alert(h);*/
+            //$("name").val("zhangsan");
+            //$(".l2").css("color","red").css("fontSize","30px");
+            //$("li").css("color","blue");
+            //通配符*
+            //$("[name=pwd]").val("1234")
+            /*$("[name=hobby]").each(function (){
+                alert($(this).val())
+            })*/
+            /*$("[name=hobby]:checked").each(function (){
+                alert($(this).val())
+            })*/
+        })
+
+        function selectAll(){
+            $("[name = hobby]").prop("checked",true);
+        }
+        function unselectAll(){
+            $("[name = hobby]").prop("checked",false);
+        }
+
+    </script>
+</head>
+<body>
+    <div id="mydiv">123</div>
+    <input type="checkbox" name="hobby" value="吃">吃
+    <input type="checkbox" name="hobby" value="喝">喝
+    <input type="checkbox" name="hobby" value="玩">玩
+    <button type="button" onclick="selectAll()">全选</button>
+    <button type="button" onclick="unselectAll()">取消</button>
+    <!--<input type="text" id="name">
+    <input type="text" name="pwd">
+    <input type="text" name="email">-->
+    <ul>
+        <li>aaa</li>
+        <li class="l2">bbb</li>
+        <li>ccc</li>
+        <li>ddd</li>
+    </ul>
+</body>
+</html>
