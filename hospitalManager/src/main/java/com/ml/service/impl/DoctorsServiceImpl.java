@@ -16,9 +16,10 @@ public class DoctorsServiceImpl implements DoctorsService {
             DoctorsMapper doctorsMapper = sqlSession.getMapper(DoctorsMapper.class);
             return doctorsMapper.login(name, password);
         } catch (SQLException e) {
-            MybatisUtil.closeSqlSession();
+            e.printStackTrace();
         } finally {
-            return null;
+            MybatisUtil.closeSqlSession();
         }
+        return null;
     }
 }
