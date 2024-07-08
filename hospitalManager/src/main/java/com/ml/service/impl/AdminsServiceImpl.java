@@ -17,9 +17,10 @@ public class AdminsServiceImpl implements AdminsService {
             AdminsMapper adminsMapper = sqlSession.getMapper(AdminsMapper.class);
             return adminsMapper.login(name, password);
         } catch (SQLException e) {
-            MybatisUtil.closeSqlSession();
+            e.printStackTrace();
         } finally {
-            return null;
+            MybatisUtil.closeSqlSession();
         }
+        return null;
     }
 }
