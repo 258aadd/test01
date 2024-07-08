@@ -32,11 +32,12 @@ public class LoginServlet extends HttpServlet {
 
         if("1".equals(rid)) {
             Admins admins = adminsService.login(name, password);
+            System.out.println(admins);
             if(admins != null) {
                 req.getSession().setAttribute("admins", admins);
                 resp.sendRedirect(req.getContextPath() + "/adminIndex.jsp");
             } else{
-                resp.sendRedirect( req.getContextPath() + "/login.jsp?flag=f");
+                resp.sendRedirect( req.getContextPath() + "/login.jsp?flag=false");
             }
         } else if("2".equals(rid)) {
             Doctors doctors = doctorsService.login(name,password);
