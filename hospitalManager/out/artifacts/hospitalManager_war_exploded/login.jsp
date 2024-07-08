@@ -27,7 +27,7 @@
             <div style="height:150px;"></div>
             <div class="media media-y margin-big-bottom">
             </div>
-            <form action="#{pageContext.request.contextPath}/user/login" method="post">
+            <form action="${pageContext.request.contextPath}/user/login" method="post">
                 <div class="panel loginbox">
                     <div class="text-center margin-big padding-big-top"><h1>后台管理中心</h1></div>
                     <h4 style="color: red">${param.flag=="false"?"用户名或密码错误":""}</h4>
